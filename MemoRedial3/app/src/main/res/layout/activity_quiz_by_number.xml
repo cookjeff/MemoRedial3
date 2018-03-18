@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.memoredial3.QuizByNumberActivity">
+
+    <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonChoice1"
+        android:layout_width="282dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="65dp"
+        android:onClick="clickOption1"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+    <Button
+        android:id="@+id/buttonChoice2"
+        android:layout_width="282dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="24dp"
+        android:onClick="clickOption2"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChoice1" />
+
+    <Button
+        android:id="@+id/buttonChoice3"
+        android:layout_width="282dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="24dp"
+        android:onClick="clickOption3"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChoice2" />
+</android.support.constraint.ConstraintLayout>

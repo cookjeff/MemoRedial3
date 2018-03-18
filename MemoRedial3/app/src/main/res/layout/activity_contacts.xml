@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.memoredial3.ContactsActivity">
+
+    <Button
+        android:id="@+id/contactButton1"
+        android:layout_width="282dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="16dp"
+        android:onClick="contactButtonClick"
+        android:text="Linda J"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/contactButton2"
+        android:layout_width="282dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="11dp"
+        android:onClick="contactButtonClick"
+        android:text="Waldon C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactButton1" />
+
+    <Button
+        android:id="@+id/contactButton3"
+        android:layout_width="282dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="11dp"
+        android:onClick="contactButtonClick"
+        android:text="John F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactButton2" />
+
+    <Button
+        android:id="@+id/contactButton4"
+        android:layout_width="282dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="11dp"
+        android:onClick="contactButtonClick"
+        android:text="Shell M"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactButton3" />
+</android.support.constraint.ConstraintLayout>
