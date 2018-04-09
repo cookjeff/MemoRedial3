@@ -84,6 +84,12 @@ public class QuizByNumberActivity extends AppCompatActivity {
         }
         buttons[currIndex].setText(falseName2);
 
+
+        if (MainActivity.assertions) {
+            assert(!buttons[0].getText().toString().equals(buttons[1].getText().toString()));
+            assert(!buttons[1].getText().toString().equals(buttons[2].getText().toString()));
+            assert(!buttons[2].getText().toString().equals(buttons[0].getText().toString()));
+        }
     }
 
     protected void popUpMessage(String msg) {

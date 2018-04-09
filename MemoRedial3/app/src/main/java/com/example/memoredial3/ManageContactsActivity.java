@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.zip.DataFormatException;
+
 public class ManageContactsActivity extends AppCompatActivity {
 
     SharedPreferences sharedprefs;
@@ -31,25 +33,18 @@ public class ManageContactsActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void clickAdd(View v) {
-        if (sharedprefs.contains("Contact1") && sharedprefs.contains("Contact2")) {
-            popUpMessage("Contacts full!");
+    public void clickSubmit(View v) {
+         try {
+            ContactsHelper.addContact(nameText.getText().toString(), numText.getText().toString());
+        } catch (DataFormatException dfe) {
+            popUpMessage(dfe.getMessage());
             return;
         }
-        if (nameText.getText().toString().equals("")) {
-            popUpMessage("Invalid name!");
-            return;
-        }
-        if (numText.getText().toString().equals("") || numText.getText().toString().length()!=10) {
 
-            popUpMessage("Invalid number; must be 10 digits (include area code).");
-        }
+        popUpMessage("Contact added successfully.");
 
-        if (sharedprefs.contains("Contact1")) {
-
-        } else {
-
-        }
+        nameText.setText("");
+        numText.setText("");
 
     }
 }

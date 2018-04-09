@@ -20,7 +20,8 @@
         <activity android:name=".MainDialActivity" />
         <activity android:name=".ManageContactsActivity" />
         <activity android:name=".MultiQuizDialerActivity" />
-        <activity android:name=".QuizByNumberActivity"></activity>
+        <activity android:name=".QuizByNumberActivity" />
+        <activity android:name=".ScrollingContactsActivity"></activity>
     </application>
 
 </manifest>

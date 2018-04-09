@@ -30,10 +30,6 @@ public class ContactsActivity extends AppCompatActivity {
         intent.putExtra("MODE",mode);
         intent.putExtra("NAME",name);
         intent.putExtra("NUMBER",number);
-        if (mode=="DialContactViewingNumber") {
-
-
-        }
         startActivity(intent);
     }
 

@@ -14,7 +14,6 @@
         android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,8 +40,8 @@
 
     <TextView
         android:id="@+id/textNumberLabel"
-        android:layout_width="130dp"
-        android:layout_height="19dp"
+        android:layout_width="191dp"
+        android:layout_height="22dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
         android:text="New Contact Number"

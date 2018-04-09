@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     static ContactsHelper contactsHelper;
 
+    public static final boolean assertions = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickDialContactViewingNumber(View v) {
-        Intent intent = new Intent(this, ContactsActivity.class);
+        Intent intent = new Intent(this, ScrollingContactsActivity.class);
         intent.putExtra("MODE","DialContactViewingNumber");
         startActivity(intent);
     }
 
     public void clickDialContactFromMemory(View v) {
-        Intent intent = new Intent(this, ContactsActivity.class);
+        Intent intent = new Intent(this, ScrollingContactsActivity.class);
         intent.putExtra("MODE","DialContactFromMemory");
         startActivity(intent);
     }
