@@ -1,17 +1,20 @@
 package com.example.memoredial3;
 
+import android.provider.ContactsContract;
+
 /**
  * Created by jrcb7 on 2/6/2018.
  */
 
 public class PhoneNumberHelper {
+    private static String num;
     private String number = "";
 
     public String addNumber(int num) {
         return addNumber(Integer.toString(num));
     }
     public String addNumber(String num) {
-        if (number.length() < 11) {
+        if (number.length() < 10) {
             number += num;
         }
         return number.toString();
@@ -24,6 +27,10 @@ public class PhoneNumberHelper {
     public String clear() {
         number = "";
         return number;
+    }
+
+    public void setNumber(String num) {
+        number = num;
     }
 
     public void Reset() {
@@ -42,8 +49,13 @@ public class PhoneNumberHelper {
         return number.length();
     }
 
+    public static String siftNumber(String num) {
+        PhoneNumberHelper.num = num;
+        return num.replace("(","").replace(" ","").replace(")","").replace("-","");
+    }
+
     public String toString() {
-        return toString(number);
+        return PhoneNumberHelper.toString(number);
     }
 
     public static String toString(String number) {
@@ -54,23 +66,25 @@ public class PhoneNumberHelper {
             case 1:
             case 2:
             case 3:
-            case 4:
                 result = number;
                 break;
+            case 4:
+                result = number.substring(0,3) + "-" + number.charAt(3);
+                break;
             case 5:
-                result = number.charAt(0) + "-" + number.substring(1);
+                result = number.substring(0,3) + "-" + number.substring(3);
                 break;
             case 6:
-                result = number.substring(0,2) + "-" + number.substring(2);
+                result = number.substring(0,3) + "-" + number.substring(3);
                 break;
             case 7:
                 result = number.substring(0,3) + "-" + number.substring(3);
                 break;
             case 8:
-                result = "(  " + number.charAt(0) + ") " + number.substring(1,3) + "-" +number.substring(3);
+                result = "("+number.substring(0,3) + ") " + number.substring(3,6) + "-" +number.substring(6);
                 break;
             case 9:
-                result = "( " + number.substring(0,2)+") " + number.substring(2,5) + "-" + number.substring(5);
+                result = "(" + number.substring(0,3)+") " + number.substring(3,6) + "-" + number.substring(6);
                 break;
             case 10:
             default:

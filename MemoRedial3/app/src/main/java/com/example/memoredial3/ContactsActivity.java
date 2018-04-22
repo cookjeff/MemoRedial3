@@ -16,12 +16,18 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         Bundle bundle = getIntent().getExtras();
         mode = bundle.getString("MODE");
         button1 = (Button)findViewById(R.id.contactButton1);
         button2 = (Button)findViewById(R.id.contactButton2);
         button3 = (Button)findViewById(R.id.contactButton3);
         button4 = (Button)findViewById(R.id.contactButton4);
+
+
 
     }
 

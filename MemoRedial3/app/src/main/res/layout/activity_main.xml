@@ -72,4 +72,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonQuizByNumber" />
 
+    <Button
+        android:id="@+id/buttonFillWithSampleContacts"
+        android:layout_width="182dp"
+        android:layout_height="36dp"
+        android:onClick="clickFillSampleContacts"
+        android:text="Fill Sample Contacts"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="466dp" />
+
 </android.support.constraint.ConstraintLayout>

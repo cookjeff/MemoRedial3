@@ -19,6 +19,7 @@ public class MainDialActivity extends AppCompatActivity {
     String mode;
     String name;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dial);

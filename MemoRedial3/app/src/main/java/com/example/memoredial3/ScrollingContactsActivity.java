@@ -31,6 +31,8 @@ public class ScrollingContactsActivity extends AppCompatActivity {
 
         setTitle("Select Contact");
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Bundle bundle = getIntent().getExtras();
         mode = bundle.getString("MODE");
 

@@ -39,7 +39,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
     public void onBindViewHolder(MyViewHolder holder, int position) {
         String name = ContactsHelper.getNameAt(position);
         holder.name.setText(name);
-        holder.number.setText(ContactsHelper.getNumber(name));
+        holder.number.setText(PhoneNumberHelper.toString(ContactsHelper.getNumber(name)));
     }
 
     public int getItemCount() {
